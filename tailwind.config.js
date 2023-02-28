@@ -24,6 +24,8 @@ module.exports = {
         'deliveroo': '#00ccbc',
         'overlay_delivero': '#00998c',
         'facebook': '#4c69ba',
+        'divgrey1': '#2e3333',
+        'divgrey2': '#434848',
 
         
       },
