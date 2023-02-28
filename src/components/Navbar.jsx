@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import 'animate.css';
 import Logo from "../img/logo.png"
 import Menu from "../img/menu.svg"
 import Exit from "../img/exit.svg"
@@ -20,7 +21,7 @@ const Navbar = () => {
     const [openCollConNoi, setOpenColConNoi] = useState(true);
 
     return (
-        <div>
+        <div className=''>
             <div className=' flex justify-between items-center h-[70px] w-full px-[15px] gap-2 border-b-[1px]'>
             <Link to="/">
                         <img className='w-[120px] h-[32px] ' src={Logo} alt="logo" />
@@ -62,7 +63,7 @@ const Navbar = () => {
                 </div>
             </div>
             {!openNav && <div className='w-full h-full overlay fixed'>
-                <div className='w-full h-screen bg-grigio fixed top-0 md:w-[375px] md:right-0 md:border-l-[1px] '>
+                <div className=' w-full h-screen bg-grigio fixed top-0 md:w-[375px] md:right-0 md:border-l-[1px] '>
                     <div className='flex justify-between items-center h-[70px] w-full px-[15px] border-b-[1px] bg-white'>
                         <img className='w-[120px] h-[32px] ' src={Logo} alt="logo" />
                         <img onClick={() => setOpenNav(!openNav)} className='w-[18px]' src={Exit} alt="exit" />

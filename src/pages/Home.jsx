@@ -4,9 +4,17 @@ import Navbar from '../components/Navbar'
 const Home = () => {
   return (
     <div>
-        <header>
-            
-        </header>
+      <header>
+
+      </header>
+
+      <main>
+
+      </main>
+
+      <footer>
+
+      </footer>
     </div>
   )
 }
