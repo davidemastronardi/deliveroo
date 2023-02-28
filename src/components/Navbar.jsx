@@ -11,6 +11,8 @@ import ArrowBelow from "../img/arrowbelow.svg"
 import ShopDeliveroo from "../img/shopdeliveroo.svg"
 import WorkDeliveroo from "../img/workdeliveroo.svg"
 import FoodDeliveroo from "../img/fooddeliveroo.svg"
+import HomeDeliveroo from "../img/homedeliveroo.svg"
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
 
@@ -19,44 +21,49 @@ const Navbar = () => {
 
     return (
         <div>
-            <div className='bg-black flex justify-between items-center h-[60px] w-full px-[15px] gap-2'>
-                <img className='w-[120px] h-[32px] ' src={Logo} alt="logo_deliveroo" />
+            <div className='bg-black flex justify-between items-center h-[70px] w-full px-[15px] gap-2'>
+            <Link to="/">
+                        <img className='w-[120px] h-[32px] ' src={Logo} alt="logo" />
+                    </Link>
                 <div className='flex gap-[10px]'>
-                    <button onClick={() => setOpenColConNoi(!openCollConNoi)} className='hidden bg-white h-[40px] rounded-[3px] md:flex items-center px-[15px] py-[px] gap-2'>
-                        {openCollConNoi ? <img className='w-[30px]' src={ArrowBelow} alt="arrow_below" /> :
-                            <img className='w-[30px]' src={ArrowUp} alt="arrow_below" />}
-                        <p>Collabora con noi</p>
-                        {!openCollConNoi && <div className='p-[10px] bg-yellow-300 top-[55px] left-[259px] rounded-[3px] absolute'>
+                    <button onClick={() => setOpenColConNoi(!openCollConNoi)} className='hidden bg-white h-[40px] rounded-[3px] md:flex md:flex-col items-center justify-center px-[15px] py-[px] gap-2'>
+                        <div className='flex items-center'>
+                            {!openCollConNoi ? <img className='w-[30px]' src={ArrowBelow} alt="arrow_below" /> :
+                                <img className='w-[30px]' src={ArrowUp} alt="arrow_below" />}
+                            <p>Collabora con noi</p>
+                        </div>
+                        {!openCollConNoi && <div className='p-[10px] bg-white  rounded-[3px] absolute top-[60px] right-[300px]'>
                             <div className='px-[12px] py-[10px] flex flex-col gap-3 text-[15px]'>
                                 <div className='flex gap-4'>
-                                    <img className='w-[20px]' src={FoodDeliveroo} alt="FoodGrey" />
+                                    <img className='w-[15px]' src={FoodDeliveroo} alt="Food" />
                                     <p>Ristoranti</p>
                                 </div>
                                 <div className='flex gap-4'>
-                                    <img className='w-[20px]' src={WorkDeliveroo} alt="FoodGrey" />
+                                    <img className='w-[15px]' src={WorkDeliveroo} alt="work" />
                                     <p>Lavora con noi</p>
                                 </div>
                                 <div className='flex gap-4'>
-                                    <img className='w-[20px]' src={ShopDeliveroo} alt="FoodGrey" />
+                                    <img className='w-[15px]' src={ShopDeliveroo} alt="shop" />
                                     <p>Deliveroo for Work</p>
                                 </div>
                             </div>
                         </div>}
                     </button>
-                    <button className='hidden bg-white h-[40px] rounded-[3px] md:flex items-center px-[15px] py-[px] gap-2'>
-                        <img className='w-[18px]' src={Menu} alt="hamburgher_menu" />
-                        <p>Registrati o accedi</p>
-                    </button>
+                    <Link to="/login">
+                        <button className='hidden bg-white h-[40px] rounded-[3px] md:flex items-center px-[15px] gap-2'>
+                            <img className='w-[18px]' src={HomeDeliveroo} alt="home" />
+                            <p>Registrati o accedi</p>
+                        </button>
+                    </Link>
                     <button onClick={() => setOpenNav(!openNav)} className='bg-white h-[40px] rounded-[3px] flex items-center px-[15px] py-[px] gap-2'>
                         <img className='w-[18px]' src={Menu} alt="hamburgher_menu" />
                         <p>Menu</p>
                     </button>
                 </div>
             </div>
-
             {!openNav && <div className='w-full h-full overlay fixed'>
                 <div className='w-full h-screen bg-grigio fixed top-0 md:w-[375px] md:right-0 md:border-l-[1px] '>
-                    <div className='flex justify-between items-center h-[60px] w-full px-[15px] border-b-[1px] bg-white'>
+                    <div className='flex justify-between items-center h-[70px] w-full px-[15px] border-b-[1px] bg-white'>
                         <img className='w-[120px] h-[32px] ' src={Logo} alt="logo" />
                         <img onClick={() => setOpenNav(!openNav)} className='w-[18px]' src={Exit} alt="exit" />
                     </div>
