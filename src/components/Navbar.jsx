@@ -21,12 +21,12 @@ const Navbar = () => {
 
     return (
         <div>
-            <div className='bg-black flex justify-between items-center h-[70px] w-full px-[15px] gap-2'>
+            <div className=' flex justify-between items-center h-[70px] w-full px-[15px] gap-2 border-b-[1px]'>
             <Link to="/">
                         <img className='w-[120px] h-[32px] ' src={Logo} alt="logo" />
                     </Link>
                 <div className='flex gap-[10px]'>
-                    <button onClick={() => setOpenColConNoi(!openCollConNoi)} className='hidden bg-white h-[40px] rounded-[3px] md:flex md:flex-col items-center justify-center px-[15px] py-[px] gap-2'>
+                    <button onClick={() => setOpenColConNoi(!openCollConNoi)} className='hidden border-[1px] bg-white h-[40px] rounded-[3px] md:flex md:flex-col items-center justify-center px-[15px] py-[px] gap-2'>
                         <div className='flex items-center'>
                             {!openCollConNoi ? <img className='w-[30px]' src={ArrowBelow} alt="arrow_below" /> :
                                 <img className='w-[30px]' src={ArrowUp} alt="arrow_below" />}
@@ -50,12 +50,12 @@ const Navbar = () => {
                         </div>}
                     </button>
                     <Link to="/login">
-                        <button className='hidden bg-white h-[40px] rounded-[3px] md:flex items-center px-[15px] gap-2'>
+                        <button className='hidden border-[1px] bg-white h-[40px] rounded-[3px] md:flex items-center px-[15px] gap-2'>
                             <img className='w-[18px]' src={HomeDeliveroo} alt="home" />
                             <p>Registrati o accedi</p>
                         </button>
                     </Link>
-                    <button onClick={() => setOpenNav(!openNav)} className='bg-white h-[40px] rounded-[3px] flex items-center px-[15px] py-[px] gap-2'>
+                    <button onClick={() => setOpenNav(!openNav)} className='bg-white h-[40px] border-[1px] rounded-[3px] flex items-center px-[15px] py-[px] gap-2'>
                         <img className='w-[18px]' src={Menu} alt="hamburgher_menu" />
                         <p>Menu</p>
                     </button>

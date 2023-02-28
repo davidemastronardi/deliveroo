@@ -11,11 +11,13 @@ import {
 } from "react-router-dom";
 import Home from "./pages/Home";
 import Login from './pages/Login';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
     <div className="App">
         <Router>
+          <Navbar/>
           <div className="routes">
             <Routes>
               <Route element={<Home />} path="/"></Route>          
