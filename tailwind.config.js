@@ -22,7 +22,9 @@ module.exports = {
       colors: {
         'grigio': '#f9fafa',
         'deliveroo': '#00ccbc',
-        'overlay_delivero': '#00998c'
+        'overlay_delivero': '#00998c',
+        'facebook': '#4c69ba',
+
         
       },
     },
