@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
+import Carousel from '../components/Carousel'
 import RicercaIndirizzo from '../components/RicercaIndirizzo'
 
 const Home = () => {
@@ -8,7 +8,7 @@ const Home = () => {
       <header>
         <RicercaIndirizzo />
       </header>
-
+      <Carousel />
       <main>
 
       </main>
