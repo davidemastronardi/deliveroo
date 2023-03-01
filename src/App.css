@@ -3,6 +3,26 @@
 @tailwind utilities;
 
 
-.overlay{
+.overlay {
     background-color: rgba(0, 0, 0, 0.493);
+}
+
+@media (min-width: 768px) {
+    .imgbg1 {
+        background-image: url(../src/img/Livello\ 1.png) !important;
+        background: no-repeat;
+        background-color: black;
+        background-size: 450px;
+        background-position: bottom 70px right 0px;
+    }
+}
+@media (min-width: 1024px) {
+    .imgbg1 {
+        background-image: url(../src/img/bg_home.png) !important;
+        background: no-repeat;
+        background-color: black;
+        background-size: cover;
+        background-position: center;
+    }
+ 
 }

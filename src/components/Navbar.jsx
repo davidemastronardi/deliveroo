@@ -29,7 +29,7 @@ const Navbar = () => {
                 <div className='flex gap-[10px]'>
                     <button onClick={() => setOpenColConNoi(!openCollConNoi)} className='hidden border-[1px] bg-white h-[40px] rounded-[3px] md:flex md:flex-col items-center justify-center px-[15px] py-[px] gap-2'>
                         <div className='flex items-center'>
-                            {!openCollConNoi ? <img className='w-[30px]' src={ArrowBelow} alt="arrow_below" /> :
+                            {openCollConNoi ? <img className='w-[30px]' src={ArrowBelow} alt="arrow_below" /> :
                                 <img className='w-[30px]' src={ArrowUp} alt="arrow_below" />}
                             <p>Collabora con noi</p>
                         </div>
