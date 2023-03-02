@@ -1,6 +1,6 @@
-import React from 'react'
-import Carousel from '../components/Carousel'
-import RicercaIndirizzo from '../components/RicercaIndirizzo'
+import React from "react";
+import CardSelection from "../components/CardSelection";
+import RicercaIndirizzo from "../components/RicercaIndirizzo";
 
 const Home = () => {
   return (
@@ -8,16 +8,17 @@ const Home = () => {
       <header>
         <RicercaIndirizzo />
       </header>
-      <Carousel />
-      <main>
 
+      <main className="px-[16px] py-[40px]">
+        <div>
+          <h1 className="text-[25px] font-bold">La selezione di Deliveroo</h1>
+          <CardSelection />
+        </div>
       </main>
 
-      <footer>
-
-      </footer>
+      <footer></footer>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
