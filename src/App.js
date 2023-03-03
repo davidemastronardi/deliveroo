@@ -13,6 +13,7 @@ import {
 import Home from "./pages/Home";
 import Login from './pages/Login';
 import Navbar from './components/Navbar';
+import TerminiCondizioni from './components/TerminiCondizioni';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
               <Route element={<Login />} path="/login"></Route>          
             </Routes>
           </div>
+          <TerminiCondizioni/>
         </Router>
       
 
