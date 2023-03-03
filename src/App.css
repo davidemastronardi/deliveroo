@@ -26,3 +26,23 @@
     }
  
 }
+.bg-confortfood{
+   background-image: url(../src/img/confortfood.webp) !important;
+    background-position: center;
+    background-size: cover; 
+}
+.bg-lamponi{
+    background-image: url(../src/img/lamponi.jpg) !important;
+    background-position: center;
+    background-size: cover;
+}
+.bg-condividere{
+    background-image: url(../src/img/condividere.jpg) !important;
+    background-position: center;
+    background-size: cover;
+}
+.bg-esclusiva{
+    background-image: url(../src/img/esclusiva.jpg) !important;
+    background-position: center;
+    background-size: cover;
+}

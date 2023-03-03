@@ -4,8 +4,8 @@ import Panino from "../img/Livello 1.png";
 const RicercaIndirizzo = () => {
   return (
     <div>
-      <div className="w-full bg-black p-[16px] pb-[104px] lg:py-[150px] imgbg1 imgbg2">
-        <div className="lg:flex lg:flex-col lg:justify-center lg:items-center lg:text-center ">
+      <div className="w-full bg-black p-[16px] pb-[104px] lg:py-[150px] imgbg1 imgbg2 ">
+        <div className="lg:w-full lg:flex lg:flex-col lg:justify-center lg:items-center lg:text-center lg:w-[1240px]">
           <div className="text-white pb-[16px] md:w-[420px] md:pt-[64px] lg:w-[1024px]">
             <h1 className="text-[28px] md:text-[40px] font-bold">
               I piatti dei ristoranti che ami e la spesa, a domicilio
