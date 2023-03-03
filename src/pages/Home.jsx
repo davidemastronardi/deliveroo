@@ -1,5 +1,6 @@
 import React from "react";
 import CardSelection from "../components/CardSelection";
+import PiattiPreferiti from "../components/PiattiPreferiti";
 import RicercaIndirizzo from "../components/RicercaIndirizzo";
 
 const Home = () => {
@@ -9,10 +10,13 @@ const Home = () => {
         <RicercaIndirizzo />
       </header>
 
-      <main className="px-[16px] py-[40px]">
-        <div>
-          <h1 className="text-[25px] font-bold">La selezione di Deliveroo</h1>
+      <main>
+        <div className="px-[16px] py-[40px]">
+          
           <CardSelection />
+        </div>
+        <div className="">
+          <PiattiPreferiti/>
         </div>
       </main>
 
