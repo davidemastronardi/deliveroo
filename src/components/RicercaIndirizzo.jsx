@@ -4,8 +4,8 @@ import Panino from "../img/Livello 1.png";
 const RicercaIndirizzo = () => {
   return (
     <div>
-      <div className="w-full bg-black p-[16px] pb-[104px] lg:py-[150px] imgbg1 imgbg2 ">
-        <div className="lg:w-full lg:flex lg:flex-col lg:justify-center lg:items-center lg:text-center lg:w-[1240px]">
+      <div className="w-full bg-black p-[16px] pb-[104px] lg:py-[150px] imgbg1 imgbg2 lg:flex lg:justify-center ">
+        <div className=" lg:flex lg:flex-col lg:justify-center lg:items-center lg:text-center lg:w-[1240px]">
           <div className="text-white pb-[16px] md:w-[420px] md:pt-[64px] lg:w-[1024px]">
             <h1 className="text-[28px] md:text-[40px] font-bold">
               I piatti dei ristoranti che ami e la spesa, a domicilio
@@ -18,8 +18,8 @@ const RicercaIndirizzo = () => {
             </p>
             <div className="hidden md:block py-[16px]">
               <input
-                className="text-black rounded-[50px] w-full h-[48px] lg:w-[600px] lg:h-[64px]"
-                type="search"
+                className="text-black rounded-[50px] w-full h-[48px] lg:w-[600px] lg:h-[64px] p-5 lg:text-center"
+                type="search" placeholder="Inserisci il tuo indirizzo completo"
               />
               <p className="py-[16px]">
                 <span className="text-deliveroo">Accedi </span>per visualizzare
@@ -35,8 +35,8 @@ const RicercaIndirizzo = () => {
             zona
           </p>
           <input
-            className="border-[1px] w-full p-[10px] rounded-[3px]"
-            type="search"
+            className="border-[1px] w-full p-3 rounded-[3px]"
+            type="search" placeholder="Inserisci il tuo indirizzo completo"
           />
           <button className="mt-[10px] h-[48px] bg-deliveroo w-full text-white font-bold rounded-[3px] md:hidden">
             Cerca
