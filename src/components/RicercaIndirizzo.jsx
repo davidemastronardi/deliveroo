@@ -1,14 +1,13 @@
-import React from "react";
+import { AddressAutofill } from "@mapbox/search-js-react";
+import React, { useEffect, useState } from "react";
 import Panino from "../img/Livello 1.png";
 
 const RicercaIndirizzo = () => {
-  function searchIndirizzo() {
-    fetch(
-      "https://api.mapbox.com/geocoding/v5/mapbox.places/novi%20li.json?proximity=ip&access_token=pk.eyJ1IjoibWFzdHJvbmFyZGk5MiIsImEiOiJjbGVzc2hoOWQxOWhwNDFvMWlyczJvcmw5In0.MB-mYrWQnxsHeyxDWSVi4Q"
-    )
-      .then((response) => response.json())
-      .then((data) => console.log(data));
-  }
+  const [value, setValue] = useState("");
+
+  useEffect(() => {
+    console.log(value);
+  }, []);
 
   return (
     <div>
@@ -24,13 +23,23 @@ const RicercaIndirizzo = () => {
               Inserisci un indirizzo per scoprire le opzioni disponibili nella
               tua zona
             </p>
-            <div className="hidden md:block py-[16px]">
+            <div className="hidden md:block py-[16px] text-black">
               <input
                 className="text-black rounded-[50px] w-full h-[48px] lg:w-[600px] lg:h-[64px] p-5 lg:text-center"
                 type="search"
                 placeholder="Inserisci il tuo indirizzo completo"
               />
-              <p className="py-[16px]">
+              <form action="#">
+                <label for="lang">Language</label>
+                <select className="w-[80%] mt-[5px] p-[16px]" name="languages" id="lang" multiple size="4">
+                  <option value="Milano">Milano</option>
+                  <option value="Torino">Torino</option>
+                  <option value="Genova">Genova</option>
+                  <option value="Roma">Roma</option>
+                </select>
+                <input type="submit" value="Submit" />
+              </form>
+              <p className="py-[16px] text-white">
                 <span className="text-deliveroo">Accedi </span>per visualizzare
                 i tuoi indirizzi recenti.
               </p>

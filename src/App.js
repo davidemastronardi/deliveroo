@@ -14,6 +14,7 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Navbar from "./components/Navbar";
 import TerminiCondizioni from "./components/TerminiCondizioni";
+import Restaurant from "./pages/Restaurant";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Routes>
             <Route element={<Home />} path="/"></Route>
             <Route element={<Login />} path="/login"></Route>
+            <Route element={<Restaurant />} path="/restaurant"></Route>
           </Routes>
         </div>
         <TerminiCondizioni />
