@@ -2,6 +2,14 @@ import React from "react";
 import Panino from "../img/Livello 1.png";
 
 const RicercaIndirizzo = () => {
+  function searchIndirizzo() {
+    fetch(
+      "https://api.mapbox.com/geocoding/v5/mapbox.places/novi%20li.json?proximity=ip&access_token=pk.eyJ1IjoibWFzdHJvbmFyZGk5MiIsImEiOiJjbGVzc2hoOWQxOWhwNDFvMWlyczJvcmw5In0.MB-mYrWQnxsHeyxDWSVi4Q"
+    )
+      .then((response) => response.json())
+      .then((data) => console.log(data));
+  }
+
   return (
     <div>
       <div className="w-full bg-black p-[16px] pb-[104px] lg:py-[150px] imgbg1 imgbg2 lg:flex lg:justify-center ">
@@ -19,7 +27,8 @@ const RicercaIndirizzo = () => {
             <div className="hidden md:block py-[16px]">
               <input
                 className="text-black rounded-[50px] w-full h-[48px] lg:w-[600px] lg:h-[64px] p-5 lg:text-center"
-                type="search" placeholder="Inserisci il tuo indirizzo completo"
+                type="search"
+                placeholder="Inserisci il tuo indirizzo completo"
               />
               <p className="py-[16px]">
                 <span className="text-deliveroo">Accedi </span>per visualizzare
@@ -36,7 +45,8 @@ const RicercaIndirizzo = () => {
           </p>
           <input
             className="border-[1px] w-full p-3 rounded-[3px]"
-            type="search" placeholder="Inserisci il tuo indirizzo completo"
+            type="search"
+            placeholder="Inserisci il tuo indirizzo completo"
           />
           <button className="mt-[10px] h-[48px] bg-deliveroo w-full text-white font-bold rounded-[3px] md:hidden">
             Cerca

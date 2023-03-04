@@ -57,10 +57,10 @@ const PiattiPreferiti = () => {
 
   const renderPreferiti = () => {
     return arrayImg.map((card,i) => {
-      console.log(card);
-      return (
-        <li className="">
-          <img className="w-full h-[144px]" src={card.img} alt="mcdonald" />
+      console.log(card,i);
+      return ( 
+        <li className="" key={i}>
+          <img className="w-full h-[144px]" src={card.img}  alt="mcdonald" />
           <p>{card.name}</p>
         </li>
       );
