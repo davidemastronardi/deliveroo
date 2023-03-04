@@ -26,6 +26,7 @@ module.exports = {
         'facebook': '#4c69ba',
         'divgrey1': '#2e3333',
         'divgrey2': '#434848',
+        'preferiti': '#ffeae4',
 
         
       },
