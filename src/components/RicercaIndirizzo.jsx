@@ -1,13 +1,12 @@
-import { AddressAutofill } from "@mapbox/search-js-react";
 import React, { useEffect, useState } from "react";
-import Panino from "../img/Livello 1.png";
 
 const RicercaIndirizzo = () => {
   const [value, setValue] = useState("");
+  const [openForm, setOpenForm] = useState(false);
 
   useEffect(() => {
     console.log(value);
-  }, []);
+  }, [value]);
 
   return (
     <div>
@@ -30,12 +29,23 @@ const RicercaIndirizzo = () => {
                 placeholder="Inserisci il tuo indirizzo completo"
               />
               <form action="#">
-                <label for="lang">Language</label>
-                <select className="w-[80%] mt-[5px] p-[16px]" name="languages" id="lang" multiple size="4">
-                  <option value="Milano">Milano</option>
-                  <option value="Torino">Torino</option>
-                  <option value="Genova">Genova</option>
-                  <option value="Roma">Roma</option>
+              <select 
+                  className="md:w-full mt-[5px] p-[16px]"
+                  name="languages"
+                  id="lang"
+                  multiple
+                  size="5"
+                >
+                  <option value="Milano">Milano (MI)</option>
+                  <option className="mt-[5px]" value="Torino">
+                    Torino (TO)
+                  </option>
+                  <option className="mt-[5px]" value="Genova">
+                    Genova (GE)
+                  </option>
+                  <option className="mt-[5px]" value="Roma">
+                    Roma (RO)
+                  </option>
                 </select>
                 <input type="submit" value="Submit" />
               </form>
