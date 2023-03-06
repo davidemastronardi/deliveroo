@@ -4,9 +4,7 @@ const RicercaIndirizzo = () => {
   const [value, setValue] = useState("");
   const [openForm, setOpenForm] = useState(false);
 
-  useEffect(() => {
-    console.log(value);
-  }, [value]);
+ 
 
   return (
     <div>
@@ -23,27 +21,27 @@ const RicercaIndirizzo = () => {
               tua zona
             </p>
             <div className="hidden md:block py-[16px] text-black">
-              <input
+              <input onChange={(e)=>setValue(e.target.value)}
                 className="text-black rounded-[50px] w-full h-[48px] lg:w-[600px] lg:h-[64px] p-5 lg:text-center"
                 type="search"
                 placeholder="Inserisci il tuo indirizzo completo"
               />
               <form action="#">
-              <select 
+              <select  
                   className="md:w-full mt-[5px] p-[16px]"
                   name="languages"
                   id="lang"
                   multiple
                   size="5"
                 >
-                  <option value="Milano">Milano (MI)</option>
-                  <option className="mt-[5px]" value="Torino">
+                  <option className=" hover:bg-hover-blue font-semibold" value="Milano">Milano (MI)</option>
+                  <option className="mt-[5px] hover:bg-hover-blue font-semibold" value="Torino">
                     Torino (TO)
                   </option>
-                  <option className="mt-[5px]" value="Genova">
+                  <option className="mt-[5px] hover:bg-hover-blue font-semibold" value="Genova">
                     Genova (GE)
                   </option>
-                  <option className="mt-[5px]" value="Roma">
+                  <option className="mt-[5px] hover:bg-hover-blue font-semibold" value="Roma">
                     Roma (RO)
                   </option>
                 </select>

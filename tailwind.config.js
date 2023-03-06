@@ -27,6 +27,7 @@ module.exports = {
         'divgrey1': '#2e3333',
         'divgrey2': '#434848',
         'preferiti': '#ffeae4',
+        'hover-blue': '#1e90ff',
 
         
       },
