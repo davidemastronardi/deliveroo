@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import CardSelection from "../components/CardSelection";
+import CerchiAltro from "../components/CerchiAltro";
 import PiattiPreferiti from "../components/PiattiPreferiti";
 import RicercaIndirizzo from "../components/RicercaIndirizzo";
 
 const Home = () => {
-
-
   return (
     <div>
       <header>
@@ -13,11 +12,14 @@ const Home = () => {
       </header>
 
       <main>
-        <div className="">
+        <div>
           <CardSelection />
         </div>
-        <div className="">
+        <div>
           <PiattiPreferiti />
+        </div>
+        <div>
+          <CerchiAltro/>
         </div>
       </main>
 
