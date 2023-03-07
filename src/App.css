@@ -2,47 +2,55 @@
 @tailwind components;
 @tailwind utilities;
 
-
 .overlay {
-    background-color: rgba(0, 0, 0, 0.493);
+  background-color: rgba(0, 0, 0, 0.493);
 }
 
 @media (min-width: 768px) {
-    .imgbg1 {
-        background-image: url(../src/img/Livello\ 1.png) !important;
-        background: no-repeat;
-        background-color: black;
-        background-size: 450px;
-        background-position: bottom 70px right 0px;
-    }
+  .imgbg1 {
+    background-image: url(../src/img/Livello\ 1.png) !important;
+    background: no-repeat;
+    background-color: black;
+    background-size: 450px;
+    background-position: bottom 70px right 0px;
+  }
 }
 @media (min-width: 1024px) {
-    .imgbg1 {
-        background-image: url(../src/img/bg_home.png) !important;
-        background: no-repeat;
-        background-color: black;
-        background-size: cover;
-        background-position: center;
-    }
- 
-}
-.bg-confortfood{
-   background-image: url(../src/img/confortfood.webp) !important;
-    background-position: center;
-    background-size: cover; 
-}
-.bg-lamponi{
-    background-image: url(../src/img/lamponi.jpg) !important;
-    background-position: center;
+  .imgbg1 {
+    background-image: url(../src/img/bg_home.png) !important;
+    background: no-repeat;
+    background-color: black;
     background-size: cover;
-}
-.bg-condividere{
-    background-image: url(../src/img/condividere.jpg) !important;
     background-position: center;
-    background-size: cover;
+  }
 }
-.bg-esclusiva{
-    background-image: url(../src/img/esclusiva.jpg) !important;
-    background-position: center;
-    background-size: cover;
+.bg-confortfood {
+  background-image: url(../src/img/confortfood.webp) !important;
+  background-position: center;
+  background-size: cover;
+}
+.bg-lamponi {
+  background-image: url(../src/img/lamponi.jpg) !important;
+  background-position: center;
+  background-size: cover;
+}
+.bg-condividere {
+  background-image: url(../src/img/condividere.jpg) !important;
+  background-position: center;
+  background-size: cover;
+}
+.bg-esclusiva {
+  background-image: url(../src/img/esclusiva.jpg) !important;
+  background-position: center;
+  background-size: cover;
+}
+.bg-sushi {
+  background-image: url(//cwa.roocdn.com/_next/static/business.4fa3b853.jpg) !important;
+  background-position: center;
+  background-size: cover;
+}
+.bg-pattern {
+  background-image: url(../src/img/pattern.jpg) !important;
+  background-position: center;
+  background-size: cover;
 }
