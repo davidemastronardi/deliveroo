@@ -28,6 +28,9 @@ module.exports = {
         'divgrey2': '#434848',
         'preferiti': '#ffeae4',
         'hover-blue': '#1e90ff',
+        'orange-scuro': '#ff483b',
+        'orange-chiaro': '#ff8100',
+        'oliva-chiaro': '#bac3c3',
 
         
       },

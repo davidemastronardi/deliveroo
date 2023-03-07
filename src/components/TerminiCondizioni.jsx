@@ -9,7 +9,7 @@ const TerminiCondizioni = () => {
   return (
     <div>
       <div className="bg-divgrey1 w-full px-[16px] py-[24px] lg:flex lg:justify-center">
-        <div className="text-white flex flex-col md:flex-row md:flex-wrap md:justify-between w-full xl:max-w-[1024px]">
+        <div className="text-white flex flex-col md:flex-row md:flex-wrap md:justify-between w-full xl:max-w-[1246px]">
           <div className="mb-[16px] bg-divgrey2 p-[24px] md:w-[49%] lg:w-[24%]">
             <h1 className="text-[18px] font-bold pb-[16px]">
               Scopri Deliveroo

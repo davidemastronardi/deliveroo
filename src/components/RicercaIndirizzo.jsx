@@ -9,7 +9,7 @@ const RicercaIndirizzo = () => {
   return (
     <div>
       <div className="w-full bg-black p-[16px] pb-[104px] lg:py-[200px] imgbg1 imgbg2 lg:flex lg:justify-center ">
-        <div className=" lg:flex lg:flex-col lg:justify-center lg:items-center lg:text-center w-full lg:max-w-[1024px]">
+        <div className=" lg:flex lg:flex-col lg:justify-center lg:items-center lg:text-center w-full lg:max-w-[1246px]">
           <div className="text-white pb-[16px] md:w-[420px] md:pt-[64px] lg:w-[1024px]">
             <h1 className="text-[28px] md:text-[40px] font-bold">
               I piatti dei ristoranti che ami e la spesa, a domicilio

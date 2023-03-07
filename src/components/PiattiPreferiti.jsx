@@ -77,7 +77,7 @@ const PiattiPreferiti = () => {
 
   return (
     <div className="w-full bg-preferiti flex justify-center">
-      <div className="xl:max-w-[1024px] pr-[16px] pl-[16px] md:pl-0 ">
+      <div className="xl:max-w-[1246px] pr-[16px] pl-[16px] md:pl-0 ">
         <h1 className="text-[26px] md:text-[32px] font-bold py-[30px] md:pl-[16px]">
           I tuoi piatti preferiti, consegnati da noi.
         </h1>

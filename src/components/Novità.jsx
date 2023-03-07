@@ -6,7 +6,7 @@ import deliverooLogo2 from "../img/deliveroologo2.png";
 const Novità = () => {
   return (
     <div className="xl:flex py-[50px] xl:justify-center px-[16px] bg-slate-100">
-      <div className="w-full xl:max-w-[1024px]">
+      <div className="w-full xl:max-w-[1246px]">
         <h1 className="text-[26px] md:text-[32px] font-bold">
           Novità della nostra cucina
         </h1>
