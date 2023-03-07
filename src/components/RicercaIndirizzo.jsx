@@ -21,32 +21,49 @@ const RicercaIndirizzo = () => {
               tua zona
             </p>
             <div className="hidden md:block py-[16px] text-black">
-              <input onChange={(e)=>setValue(e.target.value)}
+              <input
+                onChange={(e) => {setValue(e.target.value); setOpenForm(true)}}
                 className="text-black rounded-[50px] w-full h-[48px] lg:w-[600px] lg:h-[64px] p-5 lg:text-center"
                 type="search"
                 placeholder="Inserisci il tuo indirizzo completo"
               />
-              <form action="#">
-              <select  
-                  className="md:w-full mt-[5px] p-[16px]"
-                  name="languages"
-                  id="lang"
-                  multiple
-                  size="5"
-                >
-                  <option className=" hover:bg-hover-blue font-semibold" value="Milano">Milano (MI)</option>
-                  <option className="mt-[5px] hover:bg-hover-blue font-semibold" value="Torino">
-                    Torino (TO)
-                  </option>
-                  <option className="mt-[5px] hover:bg-hover-blue font-semibold" value="Genova">
-                    Genova (GE)
-                  </option>
-                  <option className="mt-[5px] hover:bg-hover-blue font-semibold" value="Roma">
-                    Roma (RO)
-                  </option>
-                </select>
-                <input type="submit" value="Submit" />
-              </form>
+              {openForm && value &&(
+                <form className="relative h-0" action="#">
+                  <select
+                    className="md:w-full mt-[5px] p-[16px] absolute left-0 bg-slate-100 "
+                    name="languages"
+                    id="lang"
+                    multiple
+                    size="5"
+                  >
+                    <option
+                      className=" hover:bg-hover-blue font-semibold"
+                      value="Milano"
+                    >
+                      Milano (MI)
+                    </option>
+                    <option
+                      className="mt-[5px] hover:bg-hover-blue font-semibold"
+                      value="Torino"
+                    >
+                      Torino (TO)
+                    </option>
+                    <option
+                      className="mt-[5px] hover:bg-hover-blue font-semibold"
+                      value="Genova"
+                    >
+                      Genova (GE)
+                    </option>
+                    <option
+                      className="mt-[5px] hover:bg-hover-blue font-semibold"
+                      value="Roma"
+                    >
+                      Roma (RO)
+                    </option>
+                  </select>
+                  <input type="submit" value="Submit" />
+                </form>
+              )}
               <p className="py-[16px] text-white">
                 <span className="text-deliveroo">Accedi </span>per visualizzare
                 i tuoi indirizzi recenti.
@@ -61,10 +78,50 @@ const RicercaIndirizzo = () => {
             zona
           </p>
           <input
+            onChange={(e) => setValue(e.target.value) && !setOpenForm()}
             className="border-[1px] w-full p-3 rounded-[3px]"
             type="search"
             placeholder="Inserisci il tuo indirizzo completo"
           />
+
+          {value && (
+            <form className="relative h-0" action="#">
+              <select
+                className="w-full mt-[5px] p-[16px] absolute left-0 bg-slate-100  "
+                name="languages"
+                id="lang"
+                multiple
+                size="5"
+              >
+                <option
+                  className=" hover:bg-hover-blue font-semibold"
+                  value="Milano"
+                >
+                  Milano (MI)
+                </option>
+                <option
+                  className="mt-[5px] hover:bg-hover-blue font-semibold"
+                  value="Torino"
+                >
+                  Torino (TO)
+                </option>
+                <option
+                  className="mt-[5px] hover:bg-hover-blue font-semibold"
+                  value="Genova"
+                >
+                  Genova (GE)
+                </option>
+                <option
+                  className="mt-[5px] hover:bg-hover-blue font-semibold"
+                  value="Roma"
+                >
+                  Roma (RO)
+                </option>
+              </select>
+              <input type="submit" value="Submit" />
+            </form>
+          )}
+
           <button className="mt-[10px] h-[48px] bg-deliveroo w-full text-white font-bold rounded-[3px] md:hidden">
             Cerca
           </button>

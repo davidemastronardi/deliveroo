@@ -13,7 +13,7 @@ const Home = () => {
       </header>
 
       <main>
-        <div className="px-[16px] md:px-[24px] py-[40px]">
+        <div className="">
           <CardSelection />
         </div>
         <div className="">
