@@ -60,17 +60,18 @@ const PiattiPreferiti = () => {
   const renderPreferiti = () => {
     return arrayImg.map((card, i) => {
       return (
-        <li className="w-full pb-[30px]  md:w-1/3 md:pl-[16px] md:pb-[30px]">
+        <li key={i} className="w-full pb-[30px]  md:w-1/3 md:pl-[16px] md:pb-[30px]">
           <div className=" object-cover">
             <img
               className="w-full h-full object-cover "
               src={card.img}
               alt="mcdonald"
-            />
+              />
           </div>
           <p className="text-[18px] font-bold">{card.name}</p>
           <p className="text-[14px]">{card.text}</p>
-        </li>
+        </li> 
+                 
       );
     });
   };
