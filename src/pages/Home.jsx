@@ -6,7 +6,11 @@ import Novità from "../components/Novità";
 import PiattiPreferiti from "../components/PiattiPreferiti";
 import RicercaIndirizzo from "../components/RicercaIndirizzo";
 
+
 const Home = () => {
+
+
+
   return (
     <div>
       <header>
