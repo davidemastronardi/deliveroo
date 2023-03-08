@@ -5,24 +5,22 @@ import CerchiAltro from "../components/CerchiAltro";
 import Novità from "../components/Novità";
 import PiattiPreferiti from "../components/PiattiPreferiti";
 import RicercaIndirizzo from "../components/RicercaIndirizzo";
-
+import Carousel from "../components/Carousel";
 
 const Home = () => {
-
-
-
   return (
     <div>
       <header>
         <RicercaIndirizzo />
+        <Carousel />
       </header>
 
       <main>
         <CardSelection />
         <PiattiPreferiti />
         <CerchiAltro />
-        <Novità/>
-        <CardWork/>
+        <Novità />
+        <CardWork />
       </main>
 
       <footer></footer>
