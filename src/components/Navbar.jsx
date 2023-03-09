@@ -28,9 +28,9 @@ const Navbar = () => {
         <div className="flex gap-[10px]">
           <button
             onClick={() => setOpenColConNoi(!openCollConNoi)}
-            className="hidden border-[1px] bg-white h-[40px] rounded-[3px] md:flex md:flex-col items-center justify-center px-[15px] py-[px] gap-2"
+            className="hidden border-[1px] bg-white h-[40px] rounded-[3px] md:flex md:flex-col items-center justify-center px-[15px] py-[px] gap-2 "
           >
-            <div className="flex items-center">
+            <div className="flex items-center ">
               {openCollConNoi ? (
                 <img className="w-[30px]" src={ArrowBelow} alt="arrow_below" />
               ) : (
@@ -39,7 +39,7 @@ const Navbar = () => {
               <p>Collabora con noi</p>
             </div>
             {!openCollConNoi && (
-              <div className="p-[10px] bg-white  rounded-[3px] absolute top-[60px] right-[300px]">
+              <div className="p-[10px] bg-white  rounded-[3px] absolute top-[60px]">
                 <div className="px-[12px] py-[10px] flex flex-col gap-3 text-[15px]">
                   <div className="flex gap-4">
                     <img className="w-[15px]" src={FoodDeliveroo} alt="Food" />
