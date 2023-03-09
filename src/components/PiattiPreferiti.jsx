@@ -1,6 +1,6 @@
 import React, { useMemo } from "react";
 
-const PiattiPreferiti = () => {
+const PiattiPreferiti = ({setFocus}) => {
   const arrayImg = useMemo(
     () => [
       {
@@ -60,7 +60,7 @@ const PiattiPreferiti = () => {
   const renderPreferiti = () => {
     return arrayImg.map((card, i) => {
       return (
-        <li key={i} className="w-full pb-[30px]  md:w-1/3 md:pl-[16px] md:pb-[30px]">
+        <li onClick={()=>setFocus(true)} key={i} className="w-full pb-[30px]  md:w-1/3 md:pl-[16px] md:pb-[30px]">
           <div className=" object-cover">
             <img
               className="w-full h-full object-cover "

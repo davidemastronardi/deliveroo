@@ -12,6 +12,7 @@ const Home = () => {
   useEffect(() => {
     window.addEventListener("scroll", (e) => {
       focus && setFocus(false);
+      console.log(focus);
     });
   }, [focus]);
 
@@ -23,7 +24,7 @@ const Home = () => {
 
       <main>
         <CardSelection setFocus={setFocus} />
-        <PiattiPreferiti />
+        <PiattiPreferiti setFocus={setFocus} />
         <CerchiAltro />
         <Novità />
         <CardWork />

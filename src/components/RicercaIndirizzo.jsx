@@ -5,7 +5,7 @@ const RicercaIndirizzo = ({ focus }) => {
   const [value, setValue] = useState("");
   const [openForm, setOpenForm] = useState(false);
   const input = useRef();
-  const navigate= useNavigate();
+  const navigate = useNavigate();
 
   useEffect(() => {
     input.current.focus();

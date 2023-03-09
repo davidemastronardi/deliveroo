@@ -1,12 +1,15 @@
-import React from 'react'
-import { useLocation } from 'react-router-dom'
+import React from "react";
+import { useLocation } from "react-router-dom";
+import ResturantMilano from "../components/ResturantMilano";
 
 const Restaurant = () => {
+  const location = useLocation();
 
-const location = useLocation();
+  return (
+    <div>
+      <ResturantMilano />
+    </div>
+  );
+};
 
-console.log(location);
-
-}
-
-export default Restaurant
+export default Restaurant;
