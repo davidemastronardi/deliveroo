@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import CardSelection from "../components/CardSelection";
 import CardWork from "../components/CardWork";
 import CerchiAltro from "../components/CerchiAltro";
@@ -7,14 +7,22 @@ import PiattiPreferiti from "../components/PiattiPreferiti";
 import RicercaIndirizzo from "../components/RicercaIndirizzo";
 
 const Home = () => {
+  const [focus, setFocus] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", (e) => {
+      focus && setFocus(false);
+    });
+  }, [focus]);
+
   return (
     <div>
       <header>
-        <RicercaIndirizzo />
+        <RicercaIndirizzo focus={focus} />
       </header>
 
       <main>
-        <CardSelection />
+        <CardSelection setFocus={setFocus} />
         <PiattiPreferiti />
         <CerchiAltro />
         <Novità />

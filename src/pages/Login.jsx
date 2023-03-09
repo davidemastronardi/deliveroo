@@ -1,10 +1,6 @@
 import React from "react";
-import Logo from "../img/logo.png";
-import HomeDeliveroo from "../img/homedeliveroo.svg";
-import Menu from "../img/menu.svg";
-import { Link } from "react-router-dom";
 import Registration_Login from "../components/Registration_Login";
-import TerminiCondizioni from "../components/TerminiCondizioni";
+
 
 const Login = () => {
   return (

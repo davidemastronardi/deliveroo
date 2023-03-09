@@ -13,63 +13,84 @@ import ShopDeliveroo from "../img/shopdeliveroo.svg";
 import WorkDeliveroo from "../img/workdeliveroo.svg";
 import FoodDeliveroo from "../img/fooddeliveroo.svg";
 import HomeDeliveroo from "../img/homedeliveroo.svg";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 
 const Navbar = () => {
   const [openNav, setOpenNav] = useState(true);
   const [openCollConNoi, setOpenColConNoi] = useState(true);
+  const [hiddenButton, setHiddenButton] = useState(true);
+  const location = useLocation();
+  console.log(location);
 
   return (
     <div className="xl:flex xl:justify-center">
-      <div className="xl:max-w-[1246px] flex justify-between items-center h-[70px] w-full px-[15px] gap-2 border-b-[1px]">
-        <Link to="/">
-          <img className="w-[120px] h-[32px] " src={Logo} alt="logo" />
-        </Link>
-        <div className="flex gap-[10px]">
-          <button
-            onClick={() => setOpenColConNoi(!openCollConNoi)}
-            className="hidden border-[1px] bg-white h-[40px] rounded-[3px] md:flex md:flex-col items-center justify-center px-[15px] py-[px] gap-2 "
-          >
-            <div className="flex items-center ">
-              {openCollConNoi ? (
-                <img className="w-[30px]" src={ArrowBelow} alt="arrow_below" />
-              ) : (
-                <img className="w-[30px]" src={ArrowUp} alt="arrow_below" />
-              )}
-              <p>Collabora con noi</p>
-            </div>
-            {!openCollConNoi && (
-              <div className="p-[10px] bg-white  rounded-[3px] absolute top-[60px]">
-                <div className="px-[12px] py-[10px] flex flex-col gap-3 text-[15px]">
-                  <div className="flex gap-4">
-                    <img className="w-[15px]" src={FoodDeliveroo} alt="Food" />
-                    <p>Ristoranti</p>
-                  </div>
-                  <div className="flex gap-4">
-                    <img className="w-[15px]" src={WorkDeliveroo} alt="work" />
-                    <p>Lavora con noi</p>
-                  </div>
-                  <div className="flex gap-4">
-                    <img className="w-[15px]" src={ShopDeliveroo} alt="shop" />
-                    <p>Deliveroo for Work</p>
+      <div className="w-full border-b-[1px] flex justify-center">
+        <div className="xl:max-w-[1246px] flex justify-between items-center h-[70px] w-full px-[15px] gap-2 ">
+          <Link to="/">
+            <img className="w-[120px] h-[32px] " src={Logo} alt="logo" />
+          </Link>
+          <div className="flex gap-[10px]">
+            {location.pathname == "/" &&<button
+              onClick={() => setOpenColConNoi(!openCollConNoi)}
+              className="hidden border-[1px] bg-white h-[40px] rounded-[3px] md:flex md:flex-col items-center justify-center px-[15px] py-[px] gap-2 "
+            >
+              <div className="flex items-center ">
+                {openCollConNoi ? (
+                  <img
+                    className="w-[30px]"
+                    src={ArrowBelow}
+                    alt="arrow_below"
+                  />
+                ) : (
+                  <img className="w-[30px]" src={ArrowUp} alt="arrow_below" />
+                )}
+                <p>Collabora con noi</p>
+              </div>
+              {!openCollConNoi && (
+                <div className="p-[10px] bg-white  rounded-[3px] absolute top-[60px]">
+                  <div className="px-[12px] py-[10px] flex flex-col gap-3 text-[15px]">
+                    <div className="flex gap-4">
+                      <img
+                        className="w-[15px]"
+                        src={FoodDeliveroo}
+                        alt="Food"
+                      />
+                      <p>Ristoranti</p>
+                    </div>
+                    <div className="flex gap-4">
+                      <img
+                        className="w-[15px]"
+                        src={WorkDeliveroo}
+                        alt="work"
+                      />
+                      <p>Lavora con noi</p>
+                    </div>
+                    <div className="flex gap-4">
+                      <img
+                        className="w-[15px]"
+                        src={ShopDeliveroo}
+                        alt="shop"
+                      />
+                      <p>Deliveroo for Work</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            )}
-          </button>
-          <Link to="/login">
-            <button className="hidden border-[1px] bg-white h-[40px] rounded-[3px] md:flex items-center px-[15px] gap-2">
-              <img className="w-[18px]" src={HomeDeliveroo} alt="home" />
-              <p>Registrati o accedi</p>
+              )}
+            </button>}
+            <Link to="/login">
+              <button className="hidden border-[1px] bg-white h-[40px] rounded-[3px] md:flex items-center px-[15px] gap-2">
+                <img className="w-[18px]" src={HomeDeliveroo} alt="home" />
+                <p>Registrati o accedi</p>
+              </button>
+            </Link>
+            <button
+              onClick={() => setOpenNav(!openNav)}
+              className="bg-white h-[40px] border-[1px] rounded-[3px] flex items-center px-[15px] py-[px] gap-2"
+            >
+              <img className="w-[18px]" src={Menu} alt="hamburgher_menu" />
+              <p>Menu</p>
             </button>
-          </Link>
-          <button
-            onClick={() => setOpenNav(!openNav)}
-            className="bg-white h-[40px] border-[1px] rounded-[3px] flex items-center px-[15px] py-[px] gap-2"
-          >
-            <img className="w-[18px]" src={Menu} alt="hamburgher_menu" />
-            <p>Menu</p>
-          </button>
+          </div>
         </div>
       </div>
       {!openNav && (
@@ -84,11 +105,13 @@ const Navbar = () => {
                 alt="exit"
               />
             </div>
-            <div className="p-[16px] pt-[30px] flex justify-center border-b-[1px] pb-[40px]">
-              <button className="w-full h-[48px] bg-deliveroo hover:bg-overlay_delivero rounded-[3px] text-white font-semibold">
-                Registrati o accedi
-              </button>
-            </div>
+            <Link to="/login">
+              <div className="p-[16px] pt-[30px] flex justify-center border-b-[1px] pb-[40px]">
+                <button onClick={()=>setOpenNav(!openNav)} className="w-full h-[48px] bg-deliveroo hover:bg-overlay_delivero rounded-[3px] text-white font-semibold">
+                  Registrati o accedi
+                </button>
+              </div>
+            </Link>
             <div className="bg-white p-[4px] border-b-[1px] hover:text-deliveroo md:hidden">
               <div className="px-[12px] py-[8px] flex items-center">
                 <span className="pr-[16px]">

@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 
-const CardSelection = () => {
+const CardSelection = ({setFocus}) => {
 
-  
   return (
-    <div className="w-full lg:flex lg:flex-col lg:items-center px-[16px] pt-[50px] pb-[80px]">
+    <div onClick={()=>setFocus(true)} className="w-full lg:flex lg:flex-col lg:items-center px-[16px] pt-[50px] pb-[80px]">
       <div className="xl:max-w-[1246px] lg:px-4">
         <h1 className="text-[25px] md:text-[32px] lg:text-[40px] font-bold mb-[35px] md:mb-0">La selezione di Deliveroo</h1>
         <div className="md:flex md:flex-wrap md:justify-between md:items-baseline">

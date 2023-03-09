@@ -1,10 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef, } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
-const RicercaIndirizzo = () => {
+const RicercaIndirizzo = ({ focus }) => {
   const [value, setValue] = useState("");
   const [openForm, setOpenForm] = useState(false);
+  const input = useRef();
+  const navigate= useNavigate();
 
- 
+  useEffect(() => {
+    input.current.focus();
+  }, [focus]);
 
   return (
     <div>
@@ -22,14 +27,18 @@ const RicercaIndirizzo = () => {
             </p>
             <div className="hidden md:block py-[16px] text-black">
               <input
-                onChange={(e) => {setValue(e.target.value); setOpenForm(true)}}
+                ref={input}
+                onChange={(e) => {
+                  setValue(e.target.value);
+                  setOpenForm(true);
+                }}
                 className="text-black rounded-[50px] w-full h-[48px] lg:w-[600px] lg:h-[64px] p-5 lg:text-center"
                 type="search"
                 placeholder="Inserisci il tuo indirizzo completo"
               />
-              {openForm && value &&(
+              {openForm && value && (
                 <form className="relative h-0" action="#">
-                  <select
+                  <select onChange={(e)=>navigate("/restaurant",{state:e.target.value})}
                     className="md:w-full mt-[5px] p-[16px] absolute left-0 bg-slate-100 "
                     name="languages"
                     id="lang"
@@ -77,7 +86,7 @@ const RicercaIndirizzo = () => {
             Inserisci un indirizzo per scoprire le opzioni disponibili nella tua
             zona
           </p>
-          <input
+          <input ref={input}
             onChange={(e) => setValue(e.target.value) && !setOpenForm()}
             className="border-[1px] w-full p-3 rounded-[3px]"
             type="search"
@@ -86,7 +95,7 @@ const RicercaIndirizzo = () => {
 
           {value && (
             <form className="relative h-0" action="#">
-              <select
+              <select onChange={(e)=>navigate("/restaurant",{state:e.target.value})}
                 className="w-full mt-[5px] p-[16px] absolute left-0 bg-slate-100  "
                 name="languages"
                 id="lang"
