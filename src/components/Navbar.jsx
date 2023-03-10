@@ -20,7 +20,7 @@ const Navbar = () => {
   const [openCollConNoi, setOpenColConNoi] = useState(true);
   const [hiddenButton, setHiddenButton] = useState(true);
   const location = useLocation();
-  console.log(location);
+
 
   return (
     <div className="xl:flex xl:justify-center">
@@ -94,8 +94,8 @@ const Navbar = () => {
         </div>
       </div>
       {!openNav && (
-        <div className="w-full h-full overlay fixed">
-          <div className=" w-full h-screen bg-grigio fixed top-0 md:w-[375px] md:right-0 md:border-l-[1px] ">
+        <div className="w-full h-screen overlay fixed">
+          <div className=" w-full h-screen bg-grigio fixed top-0 z-30 md:w-[375px] md:right-0 md:border-l-[1px] ">
             <div className="flex justify-between items-center h-[70px] w-full px-[15px] border-b-[1px] bg-white">
               <img className="w-[120px] h-[32px] " src={Logo} alt="logo" />
               <img
