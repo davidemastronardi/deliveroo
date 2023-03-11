@@ -2,11 +2,11 @@ import React from "react";
 
 const CardRestaurant = ({ dati }) => {
   return (
-    <div className="px-[16px] flex flex-col gap-5">
+    <div className="px-[16px] flex flex-col gap-5 my-[16px]">
       <div className="w-full border-[2px] border-slate-300 rounded-[5px]">
         <div className="relative">
-          <img src={dati.img} />
-          <p className="absolute top-0 p-[3px] bg-red-700 text-white font-semibold m-[10px]">
+          <img className="object-cover w-full h-full" src={dati.img} />
+          <p className="absolute top-0 p-[3px] bg-red-700 text-white text-[14px] font-semibold m-[10px]">
             {dati.consegna}
           </p>
         </div>

@@ -7,17 +7,15 @@ import Arrowpd from "../img/arrowpd.svg";
 import ArrowRight from "../img/rightarrow.svg";
 import Carota from "../img/carota.svg";
 import Cartellino from "../img/cartellino.svg";
-import Carousel from "./Carousel";
 
 const categoryList = [
   { name: "Americano", disponibili: "?" },
-  { name: "Argentino", disponibili: "?" },
   { name: "Cinese", disponibili: "?" },
-  { name: "giapponese", disponibili: "?" },
+  { name: "Giapponese", disponibili: "?" },
   { name: "Hamburger", disponibili: "?" },
   { name: "Indiano", disponibili: "?" },
   { name: "Italiano", disponibili: "?" },
-  { name: "poke", disponibili: "?" },
+  { name: "Poke", disponibili: "?" },
   { name: "Sushi", disponibili: "?" },
 ];
 
@@ -37,8 +35,7 @@ const NavFilters = ({ setFiltri, restaurantFiltratiPerCitta, filtri }) => {
                 {
                   restaurantFiltratiPerCitta.filter(
                     (restaurant) =>
-                      restaurant.categoria.toLocaleLowerCase() ==
-                      dati.name.toLocaleLowerCase()
+                      restaurant.categoria.includes(dati.name.toLocaleLowerCase())
                   ).length
                 }
               </span>
