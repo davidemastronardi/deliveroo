@@ -97,7 +97,7 @@ const NavFilters = ({ setFiltri, restaurantFiltratiPerCitta, filtri }) => {
         {/* menu filter -open- */}
 
         {openFilter && (
-          <div className="fixed top-0 left-0 w-full h-screen bg-slate-100  ">
+          <div className="fixed z-20 top-0 left-0 w-full h-screen bg-slate-100  ">
             <div className="flex p-[16px] border-b-[1px] bg-white">
               <div className="w-full text-center">
                 <h1 className="font-bold text-[16px]">Filtra</h1>
