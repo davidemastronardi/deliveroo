@@ -213,7 +213,7 @@ const Restaurant = () => {
               Ristoranti che consegnano a {location.state}
             </h1>
           </div>
-          <div className="md:w-full md:flex md:flex-wrap">
+          <div className="md:w-full md:flex md:flex-wrap pb-[50px]">
             {renderRestaurant()}
           </div>
         </div>
