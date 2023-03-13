@@ -2,7 +2,7 @@ import React from "react";
 
 const CardRestaurant = ({ dati }) => {
   return (
-    <div className="px-[16px] flex flex-col gap-5 my-[16px]">
+    <div className="w-full px-[16px] flex flex-col gap-5 my-[16px] md:w-[50%] md:px-[5px] md:my-[5px] lg:w-1/3 xl:w-[25%] ">
       <div className="w-full border-[2px] border-slate-300 rounded-[5px]">
         <div className="relative">
           <img className="object-cover w-full h-full" src={dati.img} />

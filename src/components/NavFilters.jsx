@@ -19,14 +19,14 @@ const categoryList = [
   { name: "Sushi", disponibili: "?" },
 ];
 
-const NavFilters = ({ setFiltri, restaurantFiltratiPerCitta, filtri }) => {
+const NavFilters = ({ setFiltri, restaurantFiltratiPerCitta, filtri, location }) => {
   const [openFilter, setOpenFilter] = useState(false);
   const renderCategory = () => {
     return categoryList.map((dati, i) => {
       return (
         <li
           key={i}
-          className="w-full border-b-[1px] flex items-center justify-between"
+          className="w-full border-b-[1px] md:border-none flex items-center justify-between"
         >
           <div className="flex py-[12px] px-[16px]">
             <p>
@@ -69,14 +69,15 @@ const NavFilters = ({ setFiltri, restaurantFiltratiPerCitta, filtri }) => {
             <img className="w-[36px]" src={Rider} alt="rider" />
           </div>
           <div>
-            <p className="text-[14px]">Consegna - Adesso</p>
+            <p className="text-[14px] md:hidden">Consegna - Adesso</p>
+            <p className="text-[14px] md:block">Adesso</p>
             <div className="flex ">
-              <p className="text-[16px] font-bold ">Duomo</p>
+              <p className="text-[16px] font-bold ">{location.state}</p>
               <img className="w-[25px]" src={Arrowbelow} alt="arrowbelow" />
             </div>
           </div>
         </div>
-        <div className="mt-[16px] flex gap-3 justify-between">
+        <div className="mt-[16px] flex gap-3 justify-between md:hidden">
           <input
             className="h-[46px] px-[16px]  bg-slate-100 w-full border-[1px] border-slate-200 rounded-[3px]"
             type="search"
@@ -89,9 +90,18 @@ const NavFilters = ({ setFiltri, restaurantFiltratiPerCitta, filtri }) => {
             <img className="w-[25px]" src={Filter} alt="filter" />
           </button>
         </div>
-
+        {/* menu filtri md */}
+        <div className="hidden md:w-full   md:flex md:flex-col md:justify-between md:mt-[10px] md:border-t-[1px]">
+          <div className=" w-full">
+            <div></div>
+            <div className="p-[16px]">
+              <h1 className="text-[18px] font-bold">Categorie</h1>
+            </div>
+            <ul className="md:w-full md:border-t-[1px] md:bg-white md:flex md:flex-col">{renderCategory()}</ul>
+          </div>
+          <div className="w-full bg-slate-100"></div>
+        </div>
         {/* menu filter -open- */}
-
         {openFilter && (
           <div className="fixed z-10 top-0 left-0 w-full h-screen bg-slate-100 flex flex-col justify-between  ">
             <div className="flex p-[16px] border-b-[1px] bg-white">

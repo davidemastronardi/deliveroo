@@ -25,7 +25,7 @@ const Navbar = () => {
   return (
     <div className="xl:flex xl:justify-center ">
       <div className="w-full border-b-[1px] flex justify-center">
-        <div className="xl:max-w-[1246px] flex justify-between items-center h-[70px] w-full px-[15px] gap-2 ">
+        <div className="xl:px-[50px] flex justify-between items-center h-[70px] w-full px-[15px] gap-2 ">
           <Link to="/">
             <img className="w-[120px] h-[32px] " src={Logo} alt="logo" />
           </Link>
