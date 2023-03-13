@@ -91,7 +91,7 @@ const NavFilters = ({ setFiltri, restaurantFiltratiPerCitta, filtri, location })
           </button>
         </div>
         {/* menu filtri md */}
-        <div className="hidden md:w-full   md:flex md:flex-col md:justify-between md:mt-[10px] md:border-t-[1px]">
+        <div className="hidden md:w-full md:flex md:flex-col md:justify-between md:mt-[10px] md:border-t-[1px]">
           <div className=" w-full">
             <div></div>
             <div className="p-[16px]">
