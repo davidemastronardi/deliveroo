@@ -23,7 +23,7 @@ const Navbar = () => {
 
 
   return (
-    <div className="xl:flex xl:justify-center">
+    <div className="xl:flex xl:justify-center ">
       <div className="w-full border-b-[1px] flex justify-center">
         <div className="xl:max-w-[1246px] flex justify-between items-center h-[70px] w-full px-[15px] gap-2 ">
           <Link to="/">
@@ -94,7 +94,7 @@ const Navbar = () => {
         </div>
       </div>
       {!openNav && (
-        <div className="w-full h-screen overlay fixed">
+        <div className="w-full h-screen overlay fixed z-20">
           <div className=" w-full h-screen bg-grigio fixed top-0 z-30 md:w-[375px] md:right-0 md:border-l-[1px] ">
             <div className="flex justify-between items-center h-[70px] w-full px-[15px] border-b-[1px] bg-white">
               <img className="w-[120px] h-[32px] " src={Logo} alt="logo" />

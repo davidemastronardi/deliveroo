@@ -33,9 +33,8 @@ const NavFilters = ({ setFiltri, restaurantFiltratiPerCitta, filtri }) => {
               {dati.name}
               <span className="text-slate-400 ml-[10px]">
                 {
-                  restaurantFiltratiPerCitta.filter(
-                    (restaurant) =>
-                      restaurant.categoria.includes(dati.name.toLocaleLowerCase())
+                  restaurantFiltratiPerCitta.filter((restaurant) =>
+                    restaurant.categoria.includes(dati.name.toLocaleLowerCase())
                   ).length
                 }
               </span>
@@ -94,7 +93,7 @@ const NavFilters = ({ setFiltri, restaurantFiltratiPerCitta, filtri }) => {
         {/* menu filter -open- */}
 
         {openFilter && (
-          <div className="fixed z-20 top-0 left-0 w-full h-screen bg-slate-100  ">
+          <div className="fixed z-10 top-0 left-0 w-full h-screen bg-slate-100 flex flex-col justify-between  ">
             <div className="flex p-[16px] border-b-[1px] bg-white">
               <div className="w-full text-center">
                 <h1 className="font-bold text-[16px]">Filtra</h1>
@@ -108,75 +107,80 @@ const NavFilters = ({ setFiltri, restaurantFiltratiPerCitta, filtri }) => {
                 />
               </div>
             </div>
-            <div className="bg-white">
-              <ul className="border-t-[1px] mt-[12px]">
-                <li className="w-full border-b-[1px] flex items-center justify-between">
-                  <div className="flex py-[12px] px-[16px]">
-                    <img
-                      className="w-[25px] mr-[10px]"
-                      src={Arrowpd}
-                      alt="arrowpd"
-                    />
-                    <p>Ordina</p>
-                  </div>
-                  <div className="px-[16px] flex">
-                    <p>???</p>
-                    <img
-                      className="w-[25px] ml-[10px]"
-                      src={ArrowRight}
-                      alt=""
-                    />
-                  </div>
-                </li>
-                <li className="w-full border-b-[1px] flex items-center justify-between">
-                  <div className="flex py-[12px] px-[16px]">
-                    <img
-                      className="w-[30px] mr-[7px]"
-                      src={Cartellino}
-                      alt="arrowpd"
-                    />
-                    <p>Offerte</p>
-                  </div>
-                  <div className="px-[16px] flex">
-                    <img className="w-[25px]" src={ArrowRight} alt="" />
-                  </div>
-                </li>
-                <li className="w-full border-b-[1px] flex items-center justify-between">
-                  <div className="flex py-[12px] px-[16px]">
-                    <img
-                      className="w-[25px] mr-[10px]"
-                      src={Carota}
-                      alt="arrowpd"
-                    />
-                    <p>Regimi alimentari</p>
-                  </div>
-                  <div className="px-[16px] flex">
-                    <img
-                      className="w-[25px] ml-[10px]"
-                      src={ArrowRight}
-                      alt=""
-                    />
-                  </div>
-                </li>
-              </ul>
+
+            <div className=" w-full overflow-y-auto">
+              <div className="bg-white">
+                <ul className="border-t-[1px] mt-[12px]">
+                  <li className="w-full border-b-[1px] flex items-center justify-between">
+                    <div className="flex py-[12px] px-[16px]">
+                      <img
+                        className="w-[25px] mr-[10px]"
+                        src={Arrowpd}
+                        alt="arrowpd"
+                      />
+                      <p>Ordina</p>
+                    </div>
+                    <div className="px-[16px] flex">
+                      <p>???</p>
+                      <img
+                        className="w-[25px] ml-[10px]"
+                        src={ArrowRight}
+                        alt=""
+                      />
+                    </div>
+                  </li>
+                  <li className="w-full border-b-[1px] flex items-center justify-between">
+                    <div className="flex py-[12px] px-[16px]">
+                      <img
+                        className="w-[30px] mr-[7px]"
+                        src={Cartellino}
+                        alt="arrowpd"
+                      />
+                      <p>Offerte</p>
+                    </div>
+                    <div className="px-[16px] flex">
+                      <img className="w-[25px]" src={ArrowRight} alt="" />
+                    </div>
+                  </li>
+                  <li className="w-full border-b-[1px] flex items-center justify-between">
+                    <div className="flex py-[12px] px-[16px]">
+                      <img
+                        className="w-[25px] mr-[10px]"
+                        src={Carota}
+                        alt="arrowpd"
+                      />
+                      <p>Regimi alimentari</p>
+                    </div>
+                    <div className="px-[16px] flex">
+                      <img
+                        className="w-[25px] ml-[10px]"
+                        src={ArrowRight}
+                        alt=""
+                      />
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div className="p-[16px]">
+                <h1 className="text-[18px] font-bold">Categorie</h1>
+              </div>
+              <ul className="border-t-[1px] bg-white">{renderCategory()}</ul>
             </div>
-            <div className="p-[16px]">
-              <h1 className="text-[18px] font-bold">Categorie</h1>
-            </div>
-            <ul className="border-t-[1px] bg-white">{renderCategory()}</ul>
-            <div className="w-full p-[16px]">
-              <button
-                onClick={() => setOpenFilter(!openFilter)}
-                className="w-full text-center text-[16px] text-white font-bold bg-deliveroo rounded-[3px] px-[24px] py-[12px]"
-              >
-                <p>Fatto</p>
-              </button>
-              <button
-                onClick={() => setOpenFilter(!openFilter)}
-                className="mt-[10px] w-full text-center text-[16px] text-deliveroo border-[1px] border-slate-300 rounded-[3px] px-[24px] py-[12px]"
-              >
-                <p>Elimina tutti</p>
-              </button>
+            <div className="w-full bg-slate-100">
+              <div className="w-full p-[16px]">
+                <button
+                  onClick={() => setOpenFilter(!openFilter)}
+                  className="w-full text-center text-[16px] text-white font-bold bg-deliveroo rounded-[3px] px-[24px] py-[12px]"
+                >
+                  <p>Fatto</p>
+                </button>
+                <button
+                  onClick={() => setOpenFilter(!openFilter)}
+                  className="mt-[10px] w-full text-center text-[16px] text-deliveroo border-[1px] border-slate-300 rounded-[3px] px-[24px] py-[12px]"
+                >
+                  <p>Elimina tutti</p>
+                </button>
+              </div>
             </div>
           </div>
         )}
