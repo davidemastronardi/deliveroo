@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Rider from "../img/rider.png";
 import Arrowbelow from "../img/arrowbelow.svg";
 import Filter from "../img/filter.svg";
@@ -20,6 +20,11 @@ const categoryList = [
 ];
 
 const NavFilters = ({ setFiltri, restaurantFiltratiPerCitta, filtri, location }) => {
+
+useEffect(() => {
+console.log(filtri);
+}, [filtri]);
+
   const [openFilter, setOpenFilter] = useState(false);
   const renderCategory = () => {
     return categoryList.map((dati, i) => {
@@ -179,13 +184,13 @@ const NavFilters = ({ setFiltri, restaurantFiltratiPerCitta, filtri, location })
             <div className="w-full bg-slate-100">
               <div className="w-full p-[16px]">
                 <button
-                  onClick={() => setOpenFilter(!openFilter)}
+                  onClick={() => {setOpenFilter(!openFilter)}}
                   className="w-full text-center text-[16px] text-white font-bold bg-deliveroo rounded-[3px] px-[24px] py-[12px]"
                 >
                   <p>Fatto</p>
                 </button>
                 <button
-                  onClick={() => setOpenFilter(!openFilter)}
+                  onClick={() => {setOpenFilter(!openFilter); setFiltri({})}}
                   className="mt-[10px] w-full text-center text-[16px] text-deliveroo border-[1px] border-slate-300 rounded-[3px] px-[24px] py-[12px]"
                 >
                   <p>Elimina tutti</p>

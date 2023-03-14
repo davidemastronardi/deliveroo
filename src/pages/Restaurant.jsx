@@ -535,6 +535,8 @@ const Restaurant = () => {
     },
   ];
 
+  
+
   const location = useLocation();
 
   const [filtri, setFiltri] = useState({});
@@ -579,8 +581,15 @@ const Restaurant = () => {
     }
   };
 
+  function SortArray(x, y){
+    if (x.name < y.name) {return -1;}
+    if (x.name > y.name) {return 1;}
+    return 0;
+  }
+
   const renderRestaurant = () => {
-    return restaurantFiltrati.map((dati, i) => {
+    const pippo = restaurantFiltrati.sort(SortArray)
+    return pippo.map((dati, i) => {
       return <CardRestaurant key={i} dati={dati} />;
     });
   };
@@ -603,13 +612,13 @@ const Restaurant = () => {
             filtri={filtri}
           />
         </div>
-        <div className="hidden md:w-full md:flex h-full md:flex-col">
+        <div className=" md:w-full md:flex h-full md:flex-col">
           <div className="md:py-[24px]">
             <h1 className="text-[22px] font-semibold">
               Ristoranti che consegnano a {location.state}
             </h1>
           </div>
-          <div className="md:w-full md:flex md:flex-wrap pb-[50px]">
+          <div className="w-full md:w-full md:flex md:flex-wrap pb-[50px]">
             {renderRestaurant()}
           </div>
         </div>
